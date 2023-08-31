@@ -1,2 +1,2 @@
 #!/bin/bash
-(printf ".\n..\n"; ls -ap1 | grep -E '^[A-Za-z0-9]' | sed 's/$/\//') | paste -sd ',' - && echo
+find . -maxdepth 1 -printf "%f/\n" -o -printf "%f, " |sort -V | sed '$s/, $/\n/'
