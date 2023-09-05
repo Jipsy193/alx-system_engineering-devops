@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "hello $(basename "$(pwd)")
+echo "hello $USER"
